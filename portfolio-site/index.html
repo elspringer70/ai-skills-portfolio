@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Skills Portfolio</title>
+  <meta name="description" content="A portfolio of reusable AI skills for product, fintech, and startup operations.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        AI Skills Portfolio
+      </a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#stack">Tool stack</a>
+        <a href="#github">GitHub</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Product-led AI systems</p>
+        <h1>I build practical AI skills for product, fintech, and startup operations.</h1>
+        <p class="subtitle">
+          A portfolio of reusable agents that turn messy work into structured outputs: PRDs,
+          release notes, JIRA stories, compliance checklists, founder research, and more.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#skills">Explore skills</a>
+          <a class="button secondary" href="#github">View project</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Portfolio summary">
+        <div class="panel-stat">
+          <span>12</span>
+          <p>Reusable AI skill concepts</p>
+        </div>
+        <div class="panel-row">
+          <span>Current focus</span>
+          <strong>Product operations</strong>
+        </div>
+        <div class="panel-row">
+          <span>Strongest domains</span>
+          <strong>Fintech, AI, SaaS</strong>
+        </div>
+        <div class="panel-row">
+          <span>Outputs</span>
+          <strong>Docs, tickets, summaries</strong>
+        </div>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro" id="about">
+      <p class="eyebrow">About this project</p>
+      <div class="split">
+        <h2>A practical portfolio of AI workflows, not prompt gimmicks.</h2>
+        <p>
+          This project showcases reusable skills that package product judgment into repeatable
+          workflows. Each skill defines the task, required inputs, expected outputs, tool
+          connections, and quality standards needed to make AI useful in real operating teams.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Featured AI skills</p>
+          <h2>Agents for the work product teams do every week.</h2>
+        </div>
+        <div class="filters" aria-label="Skill filters">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="product">Product</button>
+          <button class="filter-button" type="button" data-filter="fintech">Fintech</button>
+          <button class="filter-button" type="button" data-filter="go-to-market">GTM</button>
+          <button class="filter-button" type="button" data-filter="operations">Ops</button>
+        </div>
+      </div>
+
+      <div class="skill-count" aria-live="polite">
+        Showing <span id="visible-count">12</span> skills
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill-card" data-category="product">
+          <span class="tag">Product</span>
+          <h3>Release Notes Writer</h3>
+          <p>Turns shipped work into clear release notes for customers, support, sales, and internal teams.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>JIRA tickets, PR summaries, feature descriptions</dd>
+            <dt>Outputs</dt>
+            <dd>Internal, customer-facing, and executive release notes</dd>
+            <dt>Tools</dt>
+            <dd>JIRA, GitHub, Confluence, Slack</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="product operations">
+          <span class="tag">Delivery</span>
+          <h3>JIRA Ticket Breakdown Agent</h3>
+          <p>Converts messy product context into engineering-ready epics, stories, tasks, and acceptance criteria.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>PRDs, meeting notes, stakeholder requests, API notes</dd>
+            <dt>Outputs</dt>
+            <dd>JIRA-ready stories, tasks, dependencies, open questions</dd>
+            <dt>Tools</dt>
+            <dd>JIRA, Linear, Confluence, Slack</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="fintech operations">
+          <span class="tag">Fintech</span>
+          <h3>Compliance Training Summarizer</h3>
+          <p>Condenses compliance and fair lending material into practical guidance for product teams.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Training docs, policy notes, review feedback</dd>
+            <dt>Outputs</dt>
+            <dd>Key takeaways, risk checklist, PM action items</dd>
+            <dt>Tools</dt>
+            <dd>Confluence, Google Drive, compliance knowledge bases</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="product go-to-market">
+          <span class="tag">Research</span>
+          <h3>Competitor Research Agent</h3>
+          <p>Creates concise battlecards and comparison matrices from public product research.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Company names, URLs, product pages, pricing pages</dd>
+            <dt>Outputs</dt>
+            <dd>Positioning summary, feature table, risks, opportunities</dd>
+            <dt>Tools</dt>
+            <dd>Web research, spreadsheets, Notion, Confluence</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="operations go-to-market">
+          <span class="tag">Comms</span>
+          <h3>Customer Email Drafter</h3>
+          <p>Drafts clear customer updates for launches, incidents, policy changes, and follow-ups.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Audience, context, decision, desired action, tone</dd>
+            <dt>Outputs</dt>
+            <dd>Subject lines, email body, short and detailed variants</dd>
+            <dt>Tools</dt>
+            <dd>Gmail, Outlook, HubSpot, Salesforce</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="operations product">
+          <span class="tag">Ops</span>
+          <h3>Meeting Notes to Action Items</h3>
+          <p>Turns raw meeting notes into decisions, owners, deadlines, risks, and follow-up messages.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Meeting notes, transcript, attendee list, agenda</dd>
+            <dt>Outputs</dt>
+            <dd>Summary, decisions, action items, follow-up email</dd>
+            <dt>Tools</dt>
+            <dd>Calendar, Zoom, Slack, JIRA, Confluence</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="product">
+          <span class="tag">Product</span>
+          <h3>Product Requirements Generator</h3>
+          <p>Transforms product ideas and stakeholder notes into structured PRDs with requirements and metrics.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Feature ideas, research notes, constraints, goals</dd>
+            <dt>Outputs</dt>
+            <dd>PRD, goals, non-goals, requirements, rollout plan</dd>
+            <dt>Tools</dt>
+            <dd>Confluence, Google Docs, Notion, JIRA</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="product fintech">
+          <span class="tag">Technical PM</span>
+          <h3>API Docs Explainer</h3>
+          <p>Translates API documentation and engineering notes into PM-friendly behavior summaries.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>OpenAPI specs, endpoint docs, Slack threads</dd>
+            <dt>Outputs</dt>
+            <dd>Behavior summary, edge cases, error states, questions</dd>
+            <dt>Tools</dt>
+            <dd>GitHub, Postman, OpenAPI, Confluence</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="go-to-market operations">
+          <span class="tag">GTM</span>
+          <h3>Sales Call Follow-Up Agent</h3>
+          <p>Converts sales call notes into polished follow-ups, objections, next steps, and CRM updates.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Call transcript, account context, objections, next steps</dd>
+            <dt>Outputs</dt>
+            <dd>Follow-up email, action list, CRM summary</dd>
+            <dt>Tools</dt>
+            <dd>Gong, Salesforce, HubSpot, Gmail, Slack</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="fintech">
+          <span class="tag">Fintech</span>
+          <h3>Financial Model Reviewer</h3>
+          <p>Reviews financial models for assumptions, inconsistencies, risks, and executive-ready takeaways.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Spreadsheet exports, assumptions, forecast notes</dd>
+            <dt>Outputs</dt>
+            <dd>Review memo, risk flags, questions, scenario notes</dd>
+            <dt>Tools</dt>
+            <dd>Excel, Google Sheets, Drive, finance data sources</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="go-to-market">
+          <span class="tag">Content</span>
+          <h3>LinkedIn Post Generator</h3>
+          <p>Turns product lessons, launch notes, and market observations into credible founder-style posts.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Theme, audience, proof points, desired tone</dd>
+            <dt>Outputs</dt>
+            <dd>Post drafts, hooks, variants, editing notes</dd>
+            <dt>Tools</dt>
+            <dd>LinkedIn, Notion, Google Docs</dd>
+          </dl>
+        </article>
+
+        <article class="skill-card" data-category="go-to-market operations">
+          <span class="tag">Founder Ops</span>
+          <h3>Founder Outreach Researcher</h3>
+          <p>Researches founders and companies to prepare personalized, useful outreach briefs.</p>
+          <dl>
+            <dt>Inputs</dt>
+            <dd>Founder name, company, website, target ask</dd>
+            <dt>Outputs</dt>
+            <dd>Research brief, personalization angles, outreach draft</dd>
+            <dt>Tools</dt>
+            <dd>Web research, LinkedIn, CRM, Gmail</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <p class="eyebrow">How each skill works</p>
+      <div class="process-grid">
+        <div class="process-step">
+          <span>01</span>
+          <h3>Define the repeatable job</h3>
+          <p>Each skill starts with a concrete work product, such as a PRD, ticket breakdown, release note, or research brief.</p>
+        </div>
+        <div class="process-step">
+          <span>02</span>
+          <h3>Specify inputs and context</h3>
+          <p>The skill names exactly what it needs: notes, docs, tickets, transcripts, APIs, policies, or customer feedback.</p>
+        </div>
+        <div class="process-step">
+          <span>03</span>
+          <h3>Generate structured outputs</h3>
+          <p>The agent creates a usable artifact with consistent sections, clear decisions, open questions, and next steps.</p>
+        </div>
+        <div class="process-step">
+          <span>04</span>
+          <h3>Evaluate quality</h3>
+          <p>Rubrics make the outputs reviewable, so the skill can improve beyond a one-off prompt.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stack-section" id="stack">
+      <div>
+        <p class="eyebrow">Tool stack</p>
+        <h2>Designed to connect with the tools where product work already happens.</h2>
+      </div>
+      <div class="tool-grid">
+        <span>JIRA</span>
+        <span>Confluence</span>
+        <span>GitHub</span>
+        <span>Slack</span>
+        <span>Google Docs</span>
+        <span>Notion</span>
+        <span>Gmail</span>
+        <span>HubSpot</span>
+        <span>Salesforce</span>
+        <span>Figma</span>
+        <span>OpenAPI</span>
+        <span>Google Sheets</span>
+      </div>
+    </section>
+
+    <section class="section github-cta" id="github">
+      <div>
+        <p class="eyebrow">GitHub call-to-action</p>
+        <h2>Explore the repo, review the examples, and follow the buildout.</h2>
+        <p>
+          The goal is to turn common product, fintech, and startup operations workflows into a
+          library of reusable AI skills with prompts, examples, tool notes, and evaluation criteria.
+        </p>
+      </div>
+      <a class="button primary dark" href="../" aria-label="Open portfolio folder">Open portfolio folder</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>AI Skills Portfolio</p>
+    <p>Practical agents for product, fintech, and startup operations.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
