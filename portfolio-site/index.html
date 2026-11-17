@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Skills Portfolio</title>
-  <meta name="description" content="A portfolio of reusable AI skills for product, fintech, and startup operations.">
+  <meta name="description" content="Working AI workflows, Codex skills, and product operations experiments for product, fintech, and startup teams.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,11 +24,11 @@
 
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Product-led AI systems</p>
-        <h1>I build practical AI skills for product, fintech, and startup operations.</h1>
+        <p class="eyebrow">Working AI workflows</p>
+        <h1>I turn repeatable product work into inspectable AI workflows.</h1>
         <p class="subtitle">
-          A portfolio of reusable agents that turn messy work into structured outputs: PRDs,
-          release notes, JIRA stories, compliance checklists, founder research, and more.
+          A build-in-public portfolio of documented workflows, Codex skills, and experiments for
+          product management, fintech, lending, compliance, and startup operations.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#skills">Explore skills</a>
@@ -39,19 +39,19 @@
       <aside class="hero-panel" aria-label="Portfolio summary">
         <div class="panel-stat">
           <span>12</span>
-          <p>Reusable AI skill concepts</p>
+          <p>Projects across the roadmap</p>
         </div>
         <div class="panel-row">
-          <span>Current focus</span>
-          <strong>Product operations</strong>
+          <span>Working Codex skills</span>
+          <strong>1</strong>
         </div>
         <div class="panel-row">
-          <span>Strongest domains</span>
-          <strong>Fintech, AI, SaaS</strong>
+          <span>Documented workflows</span>
+          <strong>1</strong>
         </div>
         <div class="panel-row">
-          <span>Outputs</span>
-          <strong>Docs, tickets, summaries</strong>
+          <span>Connected agents / live demos</span>
+          <strong>0 / 0</strong>
         </div>
       </aside>
     </section>
@@ -61,11 +61,11 @@
     <section class="section intro" id="about">
       <p class="eyebrow">About this project</p>
       <div class="split">
-        <h2>A practical portfolio of AI workflows, not prompt gimmicks.</h2>
+        <h2>Showing the work behind each workflow, including what is not built yet.</h2>
         <p>
-          This project showcases reusable skills that package product judgment into repeatable
-          workflows. Each skill defines the task, required inputs, expected outputs, tool
-          connections, and quality standards needed to make AI useful in real operating teams.
+          Each project is labeled by its actual implementation state. Working skills include source
+          instructions and examples; documented workflows include reusable portfolio materials;
+          concepts remain clearly marked until there is something real to inspect or run.
         </p>
       </div>
     </section>
@@ -89,223 +89,161 @@
         Showing <span id="visible-count">12</span> skills
       </div>
 
+      <div class="status-legend" aria-label="Implementation status legend">
+        <span><i class="status-dot status-skill"></i> Working Codex skill</span>
+        <span><i class="status-dot status-documented"></i> Documented workflow</span>
+        <span><i class="status-dot status-connected"></i> Connected agent</span>
+        <span><i class="status-dot status-demo"></i> Standalone demo</span>
+        <span><i class="status-dot status-concept"></i> Concept</span>
+      </div>
+
       <div class="skill-grid">
         <article class="skill-card" data-category="product">
-          <span class="tag">Product</span>
+          <div class="card-meta">
+            <span class="tag">Product</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>Release Notes Writer</h3>
           <p>Turns shipped work into clear release notes for customers, support, sales, and internal teams.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>JIRA tickets, PR summaries, feature descriptions</dd>
-            <dt>Outputs</dt>
-            <dd>Internal, customer-facing, and executive release notes</dd>
-            <dt>Tools</dt>
-            <dd>JIRA, GitHub, Confluence, Slack</dd>
-            <dt>Built</dt>
-            <dd>Mapped the recurring release-note workflow across audiences, then created templates for customer, support, and executive updates.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No reusable skill or connected integration is implemented yet.</p>
         </article>
 
         <article class="skill-card" data-category="product operations">
-          <span class="tag">Delivery</span>
-          <h3>JIRA Ticket Breakdown Agent</h3>
+          <div class="card-meta">
+            <span class="tag">Delivery</span>
+            <span class="status-badge status-skill">Working Codex skill</span>
+          </div>
+          <h3>JIRA Ticket Breakdown</h3>
           <p>Converts messy product context into engineering-ready epics, stories, tasks, and acceptance criteria.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>PRDs, meeting notes, stakeholder requests, API notes</dd>
-            <dt>Outputs</dt>
-            <dd>JIRA-ready stories, tasks, dependencies, open questions</dd>
-            <dt>Tools</dt>
-            <dd>JIRA, Linear, Confluence, Slack</dd>
-            <dt>Built</dt>
-            <dd>Turned backlog grooming patterns into a structured breakdown flow for stories, tasks, acceptance criteria, and blockers.</dd>
-          </dl>
+          <p class="implementation-note">Implemented as a repo-scoped Codex skill with documented examples, an evaluation rubric, and human-reviewed Markdown output. No JIRA API connection.</p>
+          <a class="card-action" href="projects/jira-ticket-breakdown.html">View project</a>
         </article>
 
         <article class="skill-card" data-category="fintech operations">
-          <span class="tag">Fintech</span>
+          <div class="card-meta">
+            <span class="tag">Fintech</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>Fair Lending Risk Checker</h3>
           <p>Reviews product flows, lending copy, or decision criteria for potential fair lending risk.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>PRDs, customer-facing copy, decision rules, training material</dd>
-            <dt>Outputs</dt>
-            <dd>Risk flags, safer language, compliance questions, PM checklist</dd>
-            <dt>Tools</dt>
-            <dd>Confluence, JIRA, policy docs, Google Docs, Slack</dd>
-            <dt>Built</dt>
-            <dd>Identified repeatable compliance review patterns, then turned them into structured instructions and output formats.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No compliance policy integration, legal review engine, or runnable skill is implemented.</p>
         </article>
 
         <article class="skill-card" data-category="product go-to-market">
-          <span class="tag">Research</span>
+          <div class="card-meta">
+            <span class="tag">Research</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>Competitor Research Agent</h3>
           <p>Creates concise battlecards and comparison matrices from public product research.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>Company names, URLs, product pages, pricing pages</dd>
-            <dt>Outputs</dt>
-            <dd>Positioning summary, feature table, risks, opportunities</dd>
-            <dt>Tools</dt>
-            <dd>Web research, spreadsheets, Notion, Confluence</dd>
-            <dt>Built</dt>
-            <dd>Standardized competitor research into repeatable comparison fields for positioning, features, pricing, and product gaps.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No automated research pipeline, browser agent, or source-verification workflow is implemented.</p>
         </article>
 
         <article class="skill-card" data-category="operations go-to-market">
-          <span class="tag">Comms</span>
+          <div class="card-meta">
+            <span class="tag">Comms</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>Customer Email Drafter</h3>
           <p>Drafts clear customer updates for launches, incidents, policy changes, and follow-ups.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>Audience, context, decision, desired action, tone</dd>
-            <dt>Outputs</dt>
-            <dd>Subject lines, email body, short and detailed variants</dd>
-            <dt>Tools</dt>
-            <dd>Gmail, Outlook, HubSpot, Salesforce</dd>
-            <dt>Built</dt>
-            <dd>Captured common customer communication patterns, then designed prompts for tone, audience, action, and escalation sensitivity.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No mailbox, CRM, approval, or sending integration is implemented.</p>
         </article>
 
         <article class="skill-card" data-category="operations product">
-          <span class="tag">Ops</span>
+          <div class="card-meta">
+            <span class="tag">Ops</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>Meeting Notes to Action Items</h3>
           <p>Turns raw meeting notes into decisions, owners, deadlines, risks, and follow-up messages.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>Meeting notes, transcript, attendee list, agenda</dd>
-            <dt>Outputs</dt>
-            <dd>Summary, decisions, action items, follow-up email</dd>
-            <dt>Tools</dt>
-            <dd>Calendar, Zoom, Slack, JIRA, Confluence</dd>
-            <dt>Built</dt>
-            <dd>Modeled meeting follow-up as a decision extraction task with owners, deadlines, unresolved questions, and next actions.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No transcript ingestion, calendar connection, or task-creation workflow is implemented.</p>
         </article>
 
         <article class="skill-card" data-category="product">
-          <span class="tag">Product</span>
+          <div class="card-meta">
+            <span class="tag">Product</span>
+            <span class="status-badge status-documented">Documented workflow</span>
+          </div>
           <h3>Product Requirements Generator</h3>
           <p>Transforms product ideas and stakeholder notes into structured PRDs with requirements and metrics.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>Feature ideas, research notes, constraints, goals</dd>
-            <dt>Outputs</dt>
-            <dd>PRD, goals, non-goals, requirements, rollout plan</dd>
-            <dt>Tools</dt>
-            <dd>Confluence, Google Docs, Notion, JIRA</dd>
-            <dt>Built</dt>
-            <dd>Converted PRD drafting into a reusable structure for goals, non-goals, requirements, risks, metrics, and rollout planning.</dd>
-          </dl>
+          <p class="implementation-note">Documented with a reusable prompt, synthetic example, tool notes, and evaluation rubric. Not yet packaged as a Codex skill.</p>
+          <a class="card-action" href="https://github.com/elspringer70/ai-skills-portfolio/tree/main/skills/prd-drafting-agent">Explore source</a>
         </article>
 
         <article class="skill-card" data-category="product fintech">
-          <span class="tag">Technical PM</span>
+          <div class="card-meta">
+            <span class="tag">Technical PM</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>API Docs Explainer</h3>
           <p>Translates API documentation and engineering notes into PM-friendly behavior summaries.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>OpenAPI specs, endpoint docs, Slack threads</dd>
-            <dt>Outputs</dt>
-            <dd>Behavior summary, edge cases, error states, questions</dd>
-            <dt>Tools</dt>
-            <dd>GitHub, Postman, OpenAPI, Confluence</dd>
-            <dt>Built</dt>
-            <dd>Translated technical API review patterns into PM-readable sections for behavior, edge cases, error states, and open questions.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No OpenAPI parser, repository connection, or runnable explainer is implemented.</p>
         </article>
 
         <article class="skill-card" data-category="go-to-market operations">
-          <span class="tag">GTM</span>
+          <div class="card-meta">
+            <span class="tag">GTM</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>Sales Call Follow-Up Agent</h3>
           <p>Converts sales call notes into polished follow-ups, objections, next steps, and CRM updates.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>Call transcript, account context, objections, next steps</dd>
-            <dt>Outputs</dt>
-            <dd>Follow-up email, action list, CRM summary</dd>
-            <dt>Tools</dt>
-            <dd>Gong, Salesforce, HubSpot, Gmail, Slack</dd>
-            <dt>Built</dt>
-            <dd>Broke post-call follow-up into repeatable CRM, objection, commitment, and next-step summaries for revenue teams.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No call-platform, CRM, or email integration is implemented.</p>
         </article>
 
         <article class="skill-card" data-category="fintech">
-          <span class="tag">Fintech</span>
+          <div class="card-meta">
+            <span class="tag">Fintech</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>Financial Model Reviewer</h3>
           <p>Reviews financial models for assumptions, inconsistencies, risks, and executive-ready takeaways.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>Spreadsheet exports, assumptions, forecast notes</dd>
-            <dt>Outputs</dt>
-            <dd>Review memo, risk flags, questions, scenario notes</dd>
-            <dt>Tools</dt>
-            <dd>Excel, Google Sheets, Drive, finance data sources</dd>
-            <dt>Built</dt>
-            <dd>Identified common model review checks for assumptions, formula risk, scenario logic, and executive-facing takeaways.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No spreadsheet parser, calculation engine, or finance-data connection is implemented.</p>
         </article>
 
         <article class="skill-card" data-category="go-to-market">
-          <span class="tag">Content</span>
+          <div class="card-meta">
+            <span class="tag">Content</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>LinkedIn Post Generator</h3>
           <p>Turns product lessons, launch notes, and market observations into credible founder-style posts.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>Theme, audience, proof points, desired tone</dd>
-            <dt>Outputs</dt>
-            <dd>Post drafts, hooks, variants, editing notes</dd>
-            <dt>Tools</dt>
-            <dd>LinkedIn, Notion, Google Docs</dd>
-            <dt>Built</dt>
-            <dd>Created a repeatable writing system for hooks, proof points, narrative structure, tone, and credible thought leadership.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No content workflow or LinkedIn publishing integration is implemented.</p>
         </article>
 
         <article class="skill-card" data-category="go-to-market operations">
-          <span class="tag">Founder Ops</span>
+          <div class="card-meta">
+            <span class="tag">Founder Ops</span>
+            <span class="status-badge status-concept">Concept</span>
+          </div>
           <h3>Founder Outreach Researcher</h3>
           <p>Researches founders and companies to prepare personalized, useful outreach briefs.</p>
-          <dl>
-            <dt>Inputs</dt>
-            <dd>Founder name, company, website, target ask</dd>
-            <dt>Outputs</dt>
-            <dd>Research brief, personalization angles, outreach draft</dd>
-            <dt>Tools</dt>
-            <dd>Web research, LinkedIn, CRM, Gmail</dd>
-            <dt>Built</dt>
-            <dd>Turned founder research into a structured brief with company context, personalization angles, relevance, and outreach drafts.</dd>
-          </dl>
+          <p class="implementation-note">Portfolio concept only. No research agent, CRM connection, or outreach automation is implemented.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="how-it-works">
-      <p class="eyebrow">How each skill works</p>
+      <p class="eyebrow">How projects mature</p>
       <div class="process-grid">
         <div class="process-step">
           <span>01</span>
-          <h3>Define the repeatable job</h3>
-          <p>Each skill starts with a concrete work product, such as a PRD, ticket breakdown, release note, or research brief.</p>
+          <h3>Document the workflow</h3>
+          <p>Start with a concrete job, source context, expected output, examples, and an evaluation rubric.</p>
         </div>
         <div class="process-step">
           <span>02</span>
-          <h3>Specify inputs and context</h3>
-          <p>The skill names exactly what it needs: notes, docs, tickets, transcripts, APIs, policies, or customer feedback.</p>
+          <h3>Package a working skill</h3>
+          <p>Turn the stable workflow into inspectable agent instructions with explicit assumptions and human-review boundaries.</p>
         </div>
         <div class="process-step">
           <span>03</span>
-          <h3>Generate structured outputs</h3>
-          <p>The agent creates a usable artifact with consistent sections, clear decisions, open questions, and next steps.</p>
+          <h3>Connect tools carefully</h3>
+          <p>Add integrations only when access, permissions, failure handling, and approval steps are defined and testable.</p>
         </div>
         <div class="process-step">
           <span>04</span>
-          <h3>Evaluate quality</h3>
-          <p>Rubrics make the outputs reviewable, so the skill can improve beyond a one-off prompt.</p>
+          <h3>Build a focused demo</h3>
+          <p>Expose a bounded experience only after the underlying workflow works reliably with representative inputs.</p>
         </div>
       </div>
     </section>
@@ -313,7 +251,8 @@
     <section class="section stack-section" id="stack">
       <div>
         <p class="eyebrow">Tool stack</p>
-        <h2>Designed to connect with the tools where product work already happens.</h2>
+        <h2>Tools considered across the workflow designs.</h2>
+        <p class="stack-note">The current implementation is local and file-based. These names describe potential integration surfaces, not active connections.</p>
       </div>
       <div class="tool-grid">
         <span>JIRA</span>
@@ -340,7 +279,7 @@
           library of reusable AI skills with prompts, examples, tool notes, and evaluation criteria.
         </p>
       </div>
-      <a class="button primary dark" href="../" aria-label="Open portfolio folder">Open portfolio folder</a>
+      <a class="button primary dark" href="https://github.com/elspringer70/ai-skills-portfolio" aria-label="Open the AI skills portfolio on GitHub">Open GitHub repo</a>
     </section>
   </main>
 

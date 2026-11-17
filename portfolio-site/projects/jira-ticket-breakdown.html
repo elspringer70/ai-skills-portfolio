@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JIRA Ticket Breakdown | AI Skills Portfolio</title>
+  <meta name="description" content="A working Codex skill that turns product context into human-reviewable epic and user-story drafts.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-page">
+  <header class="project-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        AI Skills Portfolio
+      </a>
+      <div class="nav-links">
+        <a href="#demo">Demo</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#source">Source</a>
+        <a href="#learned">What I learned</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero section">
+      <a class="back-link" href="../index.html#skills">Back to all projects</a>
+      <div class="project-hero-grid">
+        <div>
+          <div class="card-meta project-meta">
+            <span class="tag">Product delivery</span>
+            <span class="status-badge status-skill">Working Codex skill</span>
+          </div>
+          <h1>JIRA Ticket Breakdown</h1>
+          <p class="subtitle">
+            A repo-scoped Codex skill that turns PRDs, feature briefs, meeting notes, and other
+            product context into structured ticket drafts for human review.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#demo">See documented example</a>
+            <a class="button secondary" href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/.agents/skills/jira-ticket-breakdown/SKILL.md">View SKILL.md</a>
+          </div>
+        </div>
+
+        <aside class="fact-panel" aria-label="Implementation facts">
+          <div class="fact-row">
+            <span>Implementation</span>
+            <strong>Codex Agent Skill</strong>
+          </div>
+          <div class="fact-row">
+            <span>Interface</span>
+            <strong>Codex conversation</strong>
+          </div>
+          <div class="fact-row">
+            <span>Output</span>
+            <strong>Markdown ticket drafts</strong>
+          </div>
+          <div class="fact-row">
+            <span>JIRA connection</span>
+            <strong>None</strong>
+          </div>
+          <div class="fact-row">
+            <span>Approval</span>
+            <strong>Human required</strong>
+          </div>
+        </aside>
+      </div>
+
+      <div class="truth-callout">
+        <strong>Implementation boundary</strong>
+        <p>This project does not create or update JIRA issues. It generates drafts that a person reviews, revises, and manually moves into a ticketing workflow.</p>
+      </div>
+    </section>
+
+    <section class="section project-section" id="demo">
+      <div class="section-heading project-heading">
+        <div>
+          <p class="eyebrow">Demo</p>
+          <h2>A documented synthetic example, not a live application.</h2>
+        </div>
+        <p>The example below comes from the checked-in portfolio files and shows the shape of the skill's input and output.</p>
+      </div>
+
+      <div class="demo-shell">
+        <div class="demo-tabs" role="tablist" aria-label="Example input and output">
+          <button class="demo-tab active" type="button" role="tab" aria-selected="true" aria-controls="example-input" data-tab-target="example-input">Example input</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" aria-controls="example-output" data-tab-target="example-output">Example output</button>
+        </div>
+
+        <div class="demo-panel active" id="example-input" role="tabpanel">
+          <div class="code-heading">
+            <span>Synthetic fintech feature brief</span>
+            <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/skills/jira-ticket-breakdown-agent/example-input.md">View full source</a>
+          </div>
+          <div class="document-preview">
+            <h3>Income verification before credit-offer acceptance</h3>
+            <p>Customers can currently see an estimated offer after a short eligibility form. Compliance wants clearer language that the offer is not final until income verification is complete.</p>
+            <h4>Stakeholder context</h4>
+            <ul>
+              <li>Engineering can use the existing verification provider.</li>
+              <li>The provider may return approved, rejected, or manual review.</li>
+              <li>Support has seen customers interpret pre-qualification as guaranteed approval.</li>
+              <li>Data needs events when verification starts and completes.</li>
+            </ul>
+            <h4>Constraints</h4>
+            <ul>
+              <li>Launch behind a feature flag.</li>
+              <li>Do not change the pre-qualification form.</li>
+              <li>Compliance must approve customer-facing copy.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="demo-panel" id="example-output" role="tabpanel" hidden>
+          <div class="code-heading">
+            <span>Excerpt from the generated ticket package</span>
+            <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/skills/jira-ticket-breakdown-agent/example-output.md">View full source</a>
+          </div>
+          <div class="document-preview">
+            <h3>Epic: Add income verification before credit-offer acceptance</h3>
+            <p><strong>Goal:</strong> Ensure customers understand that pre-qualified offers are conditional until income verification is complete.</p>
+            <p><strong>In scope:</strong> Confirmation step, provider handoff, approved/rejected/manual-review states, analytics events, feature flag, and compliance-approved copy.</p>
+            <h4>Example story</h4>
+            <p><strong>Title:</strong> Add manual review state for income verification</p>
+            <p>As a customer whose verification requires manual review, I want to know what happens next so that I am not left waiting without context.</p>
+            <h4>Acceptance criteria excerpt</h4>
+            <ul>
+              <li>When the provider returns manual review, the application displays a pending-review state.</li>
+              <li>The customer cannot continue to final offer details while review is pending.</li>
+              <li>The application records a completion event with status <code>manual_review</code>.</li>
+              <li>Customer-facing language requires compliance approval.</li>
+            </ul>
+            <h4>Open question</h4>
+            <p>Should customers receive an email or in-app notification when manual review completes?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-example">
+        <div>
+          <p class="eyebrow">Generated artifact</p>
+          <h3>HELOC document-upload ticket drafts</h3>
+          <p>A second synthetic run produced two epics and seven stories while flagging unresolved upload, security, retention, and compliance decisions.</p>
+        </div>
+        <a class="button secondary" href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/outputs/heloc-document-upload-ticket-drafts.md">Open Markdown output</a>
+      </div>
+    </section>
+
+    <section class="section project-section" id="how-it-works">
+      <p class="eyebrow">How it works</p>
+      <h2>Instructions make the workflow repeatable; a person remains responsible for the tickets.</h2>
+
+      <div class="workflow-list">
+        <div class="workflow-item">
+          <span>01</span>
+          <div>
+            <h3>Read the supplied context</h3>
+            <p>Codex extracts confirmed goals, users, scope, constraints, risks, and missing information from material supplied in the conversation or workspace.</p>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <span>02</span>
+          <div>
+            <h3>Separate facts from assumptions</h3>
+            <p>Material unknowns become clarifying questions. Draftable gaps remain visible as assumptions or open questions instead of becoming invented requirements.</p>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <span>03</span>
+          <div>
+            <h3>Structure the ticket package</h3>
+            <p>The skill produces an epic, user stories, acceptance criteria, edge cases, dependencies, risks, engineering tasks, suggested metadata, and a readiness assessment.</p>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <span>04</span>
+          <div>
+            <h3>Apply the evaluation rubric</h3>
+            <p>The checked-in rubric tests product understanding, ticket quality, acceptance criteria, risk detection, questions, and JIRA readiness.</p>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <span>05</span>
+          <div>
+            <h3>Hand off for human review</h3>
+            <p>The final artifact is Markdown. A product manager and relevant partners decide what to change, approve, or enter into JIRA.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="implementation-grid">
+        <article>
+          <h3>Model</h3>
+          <p>The repository does not pin a model. The skill runs in Codex using the model available in that session.</p>
+        </article>
+        <article>
+          <h3>Tools</h3>
+          <p>Local file reading and Markdown output. Supporting portfolio files provide examples and evaluation guidance.</p>
+        </article>
+        <article>
+          <h3>Integrations</h3>
+          <p>None in this version. The repository discusses possible JIRA and documentation integrations but does not implement them.</p>
+        </article>
+        <article>
+          <h3>Human approval</h3>
+          <p>Required. The skill labels drafts for review and explicitly states that no JIRA issues were created or updated.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section project-section" id="source">
+      <div class="section-heading project-heading">
+        <div>
+          <p class="eyebrow">Explore the skill</p>
+          <h2>Every implemented part is visible in the repository.</h2>
+        </div>
+        <p>The Codex instructions reference the portfolio documentation rather than duplicating it.</p>
+      </div>
+
+      <div class="source-grid">
+        <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/.agents/skills/jira-ticket-breakdown/SKILL.md">
+          <span>Codex skill</span>
+          <strong>SKILL.md</strong>
+          <p>Trigger description, workflow, output contract, guardrails, and review checklist.</p>
+        </a>
+        <a href="https://github.com/elspringer70/ai-skills-portfolio/tree/main/skills/jira-ticket-breakdown-agent">
+          <span>Workflow overview</span>
+          <strong>README.md</strong>
+          <p>Purpose, use cases, included materials, and portfolio framing.</p>
+        </a>
+        <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/skills/jira-ticket-breakdown-agent/prompt.md">
+          <span>Original workflow</span>
+          <strong>prompt.md</strong>
+          <p>The source prompt that established the first structured output format.</p>
+        </a>
+        <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/skills/jira-ticket-breakdown-agent/example-input.md">
+          <span>Synthetic fixture</span>
+          <strong>example-input.md</strong>
+          <p>A compliance-sensitive income-verification feature brief.</p>
+        </a>
+        <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/skills/jira-ticket-breakdown-agent/example-output.md">
+          <span>Expected result</span>
+          <strong>example-output.md</strong>
+          <p>A full epic, stories, tasks, risks, and open-question package.</p>
+        </a>
+        <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/skills/jira-ticket-breakdown-agent/evaluation.md">
+          <span>Quality standard</span>
+          <strong>evaluation.md</strong>
+          <p>A rubric for reviewing usefulness, specificity, and readiness.</p>
+        </a>
+        <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/skills/jira-ticket-breakdown-agent/tools.md">
+          <span>Future surfaces</span>
+          <strong>tools.md</strong>
+          <p>Potential integrations, clearly separate from the current implementation.</p>
+        </a>
+        <a href="https://github.com/elspringer70/ai-skills-portfolio/blob/main/outputs/heloc-document-upload-ticket-drafts.md">
+          <span>Generated output</span>
+          <strong>HELOC ticket drafts</strong>
+          <p>A second synthetic example generated by invoking the working skill.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section project-section" id="learned">
+      <p class="eyebrow">What I learned</p>
+      <h2>The useful part is not producing more tickets. It is making uncertainty visible.</h2>
+
+      <div class="learning-grid">
+        <article>
+          <span>Challenge</span>
+          <h3>Ambiguity hides inside polished requirements</h3>
+          <p>A draft can sound complete while still missing ownership, error behavior, regulated copy, data handling, or a definition of success. The skill has to distinguish a missing decision from a requirement it is allowed to infer.</p>
+        </article>
+        <article>
+          <span>Design choice</span>
+          <h3>Readiness is part of the output</h3>
+          <p>Each story and package can be marked ready, needs clarification, or blocked. That makes the artifact useful for refinement even when it is not ready for implementation.</p>
+        </article>
+        <article>
+          <span>Limitation</span>
+          <h3>Quality still depends on source context</h3>
+          <p>The skill cannot recover product decisions that were never supplied. It can expose gaps and ask better questions, but a human still owns the answers and final scope.</p>
+        </article>
+        <article>
+          <span>Limitation</span>
+          <h3>No connected delivery workflow</h3>
+          <p>The current version does not read a live backlog, create JIRA issues, resolve dependencies, or verify implementation. It produces reviewable Markdown only.</p>
+        </article>
+        <article>
+          <span>Next improvement</span>
+          <h3>Add repeatable evaluation cases</h3>
+          <p>The rubric exists, but future work could add a small test set covering vague requests, API-heavy changes, and regulated lending flows to compare revisions systematically.</p>
+        </article>
+        <article>
+          <span>Takeaway</span>
+          <h3>Guardrails make the skill more credible</h3>
+          <p>Explicitly refusing to invent business rules or claim JIRA writes is as important as the ticket format. The boundary makes the workflow easier to trust and review.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section project-cta">
+      <div>
+        <p class="eyebrow">Try it in Codex</p>
+        <h2>Invoke the checked-in skill with your own product context.</h2>
+        <p>Start a Codex session in the repository and reference <code>$jira-ticket-breakdown</code>. Keep sensitive company or customer information out of unapproved environments.</p>
+      </div>
+      <a class="button primary" href="https://github.com/elspringer70/ai-skills-portfolio">View repository</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>AI Skills Portfolio</p>
+    <p>Working workflows, honest implementation status, and visible source.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
